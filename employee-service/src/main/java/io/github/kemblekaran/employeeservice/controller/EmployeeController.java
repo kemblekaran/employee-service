@@ -6,6 +6,12 @@ import io.github.kemblekaran.employeeservice.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Author : Karan Kemble
+ * Employee Controller to perform
+ * employee related operation which is exposed through
+ * api/v1/employee
+ */
 @RestController
 @CrossOrigin
 @RequestMapping(value = "api/v1/employee")

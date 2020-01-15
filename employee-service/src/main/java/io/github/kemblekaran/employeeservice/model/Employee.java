@@ -3,6 +3,12 @@ package io.github.kemblekaran.employeeservice.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+/**
+ * Author : Karan Kemble
+ * This class is represents @{Employee} and is configured
+ * with the JPA(Object Relational Mapping) so that it can
+ * be saved in any data source
+ */
 @Entity
 @Table(name = "employee_details", catalog = "employee_service")
 public class Employee {
@@ -20,12 +26,19 @@ public class Employee {
     public Employee() {
     }
 
+    //parameterized constructor for future use
     public Employee(@NotNull String name, @NotNull String email, @NotNull Double salary) {
         this.name = name;
         this.email = email;
         this.salary = salary;
     }
 
+    /**
+     * Checks for the empty and null input for all the
+     * properties of the @{Employee}
+     *
+     * @return boolean true if all the input is valid
+     */
     public boolean isValid() {
         return (name != null && name.length() > 0) &&
                 (email != null && email.length() > 0) &&
